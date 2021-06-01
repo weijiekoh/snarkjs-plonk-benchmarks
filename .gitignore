@@ -1,0 +1,4 @@
+*.ptau
+node_modules/*
+build/*
+*.kate-swp

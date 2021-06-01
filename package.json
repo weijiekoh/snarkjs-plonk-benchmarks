@@ -1,0 +1,33 @@
+{
+    "name": "snarkjs-plonk-benchmarks",
+    "version": "0.0.1",
+    "description": "Benchmarks for snarkjs PLONK proving time",
+    "main": "build/index.js",
+    "scripts": {
+        "circom-helper": "circom-helper -c ./circomHelperConfig.json -nc -b ./build/test/ -p 9001",
+        "test": "node ./node_modules/.bin/jest poseidonCircuits.test.ts",
+        "test-debug": "node --inspect-brk ./node_modules/.bin/jest poseidonCircuits.test.ts",
+        "watch": "tsc --watch",
+        "build": "tsc",
+        "prepare": "npm run build",
+        "test": "jest --force-exit"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/weijiekoh/snarkjs-plonk-benchmarks.git"
+    },
+    "author": "Koh Wei Jie",
+    "license": "MIT",
+    "homepage": "https://github.com/weijiekoh/snarkjs-plonk-benchmarks",
+    "devDependencies": {
+        "@types/jest": "^26.0.23",
+        "jest": "^26.6.3",
+        "ts-jest": "^26.5.6",
+        "typescript": "^4.2.4"
+    },
+    "dependencies": {
+        "circom": "^0.5.45",
+        "circomlib": "^0.5.2",
+        "snarkjs": "0.4.2"
+    }
+}
